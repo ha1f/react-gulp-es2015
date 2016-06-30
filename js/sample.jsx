@@ -1,3 +1,3 @@
-!function() {
-    console.log("読めてる？")
-}()
+(function() {
+    console.log("読めてる？");
+})();

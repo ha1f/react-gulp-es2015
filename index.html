@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>React Sample</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.js"></script>
+        <script src="http://fb.me/JSXTransformer-0.13.3.js"></script>
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+    </head>
+    <body>
+        <h2>Reactマン</h2>
+        <div id="content">content</div>
+        <script type="text/jsx">
+        var CommentBox = React.createClass({
+            render: function() {
+                return (
+                    <div>
+                        Hello はるふ world!
+                    </div>
+                );
+            }
+        });
+        ReactDOM.render(<CommentBox />, document.getElementById('content'));
+        </script>
+    </body>
+</html>

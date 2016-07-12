@@ -1,14 +1,28 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
+"use strict";
 
-var CommentBox = React.createClass({
-    render: function() {
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import Message from './message.jsx';
+
+class App extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            name: 'Hello world'
+        }
+    }
+    render() {
         return (
             <div>
-                Hello はるふ world!
+                Hello World!
+                <Message name={this.state.name}></Message>
             </div>
         );
     }
-});
+}
 
-ReactDOM.render(<CommentBox />, document.getElementById('content'));
+ReactDOM.render(
+    <App />,
+    document.getElementById('content')
+);

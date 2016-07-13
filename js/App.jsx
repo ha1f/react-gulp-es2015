@@ -3,20 +3,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Message from './message.jsx';
+import CountButton from './CountButton.jsx';
 
 class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            name: 'Hello world'
+            number: 0
         }
+    }
+    handleClick() {
+        this.setState({number: this.state.number+1});
     }
     render() {
         return (
             <div>
-                Hello World!
-                <Message name={this.state.name}></Message>
+                <div>Counter: {this.state.number}</div>
+                <CountButton onClick={this.handleClick.bind(this)}></CountButton>
             </div>
         );
     }

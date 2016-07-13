@@ -2,14 +2,14 @@
 
 import React from 'react';
 
-export default class Message extends React.Component {
+export default class CountButton extends React.Component {
     constructor(props) {
         super(props);
     }
     render() {
         return (
             <div>
-                {this.props.name}
+                <input type="button" value="カウント" onClick={this.props.onClick} />
             </div>
         );
     }

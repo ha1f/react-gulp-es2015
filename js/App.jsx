@@ -22,6 +22,7 @@ class App extends React.Component {
                 <div>Counter: {this.state.number}</div>
                 <CountButton onClick={this.handleClick.bind(this)}></CountButton>
                 <CountImage number={this.state.number}></CountImage>
+                <CountButton onClick={this.handleClick.bind(this)}></CountButton>
             </div>
         );
     }

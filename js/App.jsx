@@ -4,6 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import CountButton from './CountButton.jsx';
+import CountImage from './CountImage.jsx';
 
 class App extends React.Component {
     constructor(props) {
@@ -20,6 +21,7 @@ class App extends React.Component {
             <div>
                 <div>Counter: {this.state.number}</div>
                 <CountButton onClick={this.handleClick.bind(this)}></CountButton>
+                <CountImage number={this.state.number}></CountImage>
             </div>
         );
     }
